@@ -138,3 +138,8 @@ CELERY_TASK_RESULT_EXPIRES = 86400
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
+
+import django_heroku
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
