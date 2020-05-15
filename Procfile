@@ -1,2 +1,2 @@
 web: gunicorn TestTaskForDevelopsToday.wsgi
-heroku ps:scale worker=1
+worker: python manage.py celery worker -A TestTaskForDevelopsToday --concurrency=2 --loglevel=INFO --beat -E
