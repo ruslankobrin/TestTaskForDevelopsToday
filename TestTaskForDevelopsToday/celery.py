@@ -18,11 +18,11 @@ app.autodiscover_tasks()
 
 app.conf.CELERYBEAT_SCHEDULE = {
     "delete_table": {
-        "task": "news.tasks.test",
+        "task": "news.tasks.clean_all_table_like",
         "schedule": crontab(hour="*/24"),
     },
     "delete_table2": {
-        "task": "news.tasks.test",
+        "task": "news.tasks.clean_all_table_like",
         "schedule": crontab(minute="*/24"),
     }
 }
